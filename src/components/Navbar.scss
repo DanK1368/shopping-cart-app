@@ -1,0 +1,62 @@
+.header {
+  min-height: 10vh;
+  background-color: dodgerblue;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__navbar {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+
+    a {
+      font-size: 24px;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  &__btn-wrapper {
+    position: relative;
+  }
+
+  &__login-msg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -170px;
+    color: white;
+    font-size: 12px;
+  }
+
+  &__cart-amount {
+    position: absolute;
+    right: -20px;
+    top: -13px;
+    background-color: white;
+    padding: 0.2rem;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__cart-container {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

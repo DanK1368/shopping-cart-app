@@ -1,0 +1,32 @@
+.singleProduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+
+  &__model {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  svg {
+    cursor: pointer;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}

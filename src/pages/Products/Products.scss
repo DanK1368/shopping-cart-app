@@ -1,0 +1,15 @@
+.products {
+  min-height: 90vh;
+  display: grid;
+  place-content: center;
+
+  &__grid {
+    width: 700px;
+    height: 700px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding-block: 2rem;
+    gap: 1.5rem;
+  }
+}
