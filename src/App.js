@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     dispatch(calculateTotals());
-  }, [cart]);
+  }, [cart, dispatch]);
 
   return (
     <BrowserRouter>
