@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import KeyIcon from "@mui/icons-material/Key";
 import EmailIcon from "@mui/icons-material/Email";
 import { useDispatch, useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { handleLoginInput } from "../../../features/auth/authSlice";
 import { loginUser } from "../../../features/auth/authSlice";
 
@@ -14,17 +14,17 @@ function Login() {
   const navigate = useNavigate();
   console.log(status);
 
-  const nextPage = () => {
+  const nextPage = useCallback(() => {
     if (status !== 200) {
       return;
     } else {
       navigate("/products");
     }
-  };
+  }, [status, navigate]);
 
   useEffect(() => {
     nextPage();
-  }, [status]);
+  }, [status, nextPage]);
 
   return (
     <section className="register">

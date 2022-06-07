@@ -4,24 +4,24 @@ import inputs from "../../../inputs";
 import Input from "../../../components/Input";
 import { useDispatch, useSelector } from "react-redux";
 import { validateUser } from "../../../features/auth/authSlice";
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 
 function Validation() {
   const { values, status } = useSelector(store => store.auth);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const nextPage = () => {
+  const nextPage = useCallback(() => {
     if (status !== 200) {
       return;
     } else {
       navigate("/login");
     }
-  };
+  }, [status, navigate]);
 
   useEffect(() => {
     nextPage();
-  }, [status]);
+  }, [status, nextPage]);
 
   return (
     <section className="validation">
